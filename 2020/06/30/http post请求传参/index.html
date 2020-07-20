@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>http post请求传参 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="123456789101112131415161718192021222324252627&amp;#123;    &quot;listmsg&quot;: [        &amp;#123;            &quot;person_id&quot;: &quot;19360407_郝**&quot;,            &quot;age&quot;: 83,            &amp;quot">
+<meta property="og:type" content="article">
+<meta property="og:title" content="http post请求传参">
+<meta property="og:url" content="http://yoursite.com/2020/06/30/http%20post%E8%AF%B7%E6%B1%82%E4%BC%A0%E5%8F%82/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="123456789101112131415161718192021222324252627&amp;#123;    &quot;listmsg&quot;: [        &amp;#123;            &quot;person_id&quot;: &quot;19360407_郝**&quot;,            &quot;age&quot;: 83,            &amp;quot">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-06-30T09:39:23.740Z">
+<meta property="article:modified_time" content="2020-06-30T10:00:06.757Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-http post请求传参" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/06/30/http%20post%E8%AF%B7%E6%B1%82%E4%BC%A0%E5%8F%82/" class="article-date">
+  <time datetime="2020-06-30T09:39:23.740Z" itemprop="datePublished">2020-06-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      http post请求传参
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;listmsg&quot;: [</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;person_id&quot;: &quot;19360407_郝**&quot;,</span><br><span class="line">            &quot;age&quot;: 83,</span><br><span class="line">            &quot;gender&quot;: &quot;男&quot;,</span><br><span class="line">            &quot;visit_end_date&quot;: &quot;2019-10-29T03:04:52Z&quot;,</span><br><span class="line">            &quot;dept_discharge_from&quot;: &quot;肿瘤科病房&quot;,</span><br><span class="line">            &quot;condition_name&quot;: &quot;前列腺癌&quot;,</span><br><span class="line">            &quot;visit_record_id&quot;: &quot;0001201906210003J&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;person_id&quot;: &quot;19790211_黎**&quot;,</span><br><span class="line">            &quot;age&quot;: 40,</span><br><span class="line">            &quot;gender&quot;: &quot;女&quot;,</span><br><span class="line">            &quot;visit_end_date&quot;: &quot;2019-11-05T03:53:56Z&quot;,</span><br><span class="line">            &quot;dept_discharge_from&quot;: &quot;肿瘤科病房&quot;,</span><br><span class="line">            &quot;condition_name&quot;: &quot;宫颈癌并多发转移&quot;,</span><br><span class="line">            &quot;visit_record_id&quot;: &quot;0001201910230006J&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    &quot;params&quot;: [</span><br><span class="line">        &quot;主诉&quot;,</span><br><span class="line">        &quot;现病史&quot;,</span><br><span class="line">        &quot;既往史&quot;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h4><p>传对象数组格式参数，JSON.stringify 后，整个对象变成 key，value 为空</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&quot;listmsg&quot;:[&#123;&quot;person_id&quot;:&quot;19440824_梁**&quot;,&quot;age&quot;:75,&quot;gender&quot;:&quot;女&quot;,&quot;visit_end_date&quot;:&quot;2019-11-05T01:46:27Z&quot;,&quot;dept_discharge_from&quot;:&quot;心血管病房&quot;,&quot;condition_name&quot;:&quot;不稳定性心绞痛&quot;,&quot;visit_record_id&quot;:&quot;00012019102300046&quot;&#125;],&quot;params&quot;:[&quot;主诉&quot;]&#125;:</span><br></pre></td></tr></table></figure>
+
+<h4 id="问题产生原因："><a href="#问题产生原因：" class="headerlink" title="问题产生原因："></a>问题产生原因：</h4><p>请求头 Content-Type 为<br>application/x-www-form-urlencoded，传参方式：key : value，整个 JSON 字符串当做 key。</p>
+<h4 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h4><p>用第三方插件 qs 处理，qs.stringify()序列化</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">listmsg[0][person_id]: 19440824_梁**</span><br><span class="line">listmsg[0][age]: 75</span><br><span class="line">listmsg[0][gender]: 女</span><br><span class="line">listmsg[0][visit_end_date]: 2019-11-05T01:46:27Z</span><br><span class="line">listmsg[0][dept_discharge_from]: 心血管病房</span><br><span class="line">listmsg[0][condition_name]: 不稳定性心绞痛</span><br><span class="line">listmsg[0][visit_record_id]: 00012019102300046</span><br><span class="line">params[0]: 既往史</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/06/30/http%20post%E8%AF%B7%E6%B1%82%E4%BC%A0%E5%8F%82/" data-id="ckcu9bk1y0002ztrthpm9088a" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/06/30/Hello-Hexo/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello Hexo</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%82%96/" rel="tag">肖</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E8%82%96/" style="font-size: 10px;">肖</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/06/30/http%20post%E8%AF%B7%E6%B1%82%E4%BC%A0%E5%8F%82/">http post请求传参</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/30/Hello-Hexo/">Hello Hexo</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/30/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
